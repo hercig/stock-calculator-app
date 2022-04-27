@@ -1,0 +1,6 @@
+framework module Pods_stock_calculator_app {
+  umbrella header "Pods-stock-calculator-app-umbrella.h"
+
+  export *
+  module * { export * }
+}
