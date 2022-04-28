@@ -7,7 +7,9 @@
 
 import Foundation
 
-protocol HomeViewModeling {}
+protocol HomeViewModeling {
+    func onFavoriteButtonTap(with viewModel: FavoriteStockButtonViewModel)
+}
 
 class HomeViewModel {
     
@@ -18,4 +20,9 @@ class HomeViewModel {
     }
 }
 
-extension HomeViewModel: HomeViewModeling {}
+extension HomeViewModel: HomeViewModeling {
+    
+    func onFavoriteButtonTap(with viewModel: FavoriteStockButtonViewModel) {
+        // TODO: Go to details screen
+    }
+}

@@ -7,20 +7,17 @@
 
 import UIKit
 import SnapKit
+import RxSwift
+import RxCocoa
 
 // MARK: HomeViewController
 
 class HomeViewController: UIViewController {
     
     private let viewModel: HomeViewModeling
+    private let disposeBag = DisposeBag()
     
-    private lazy var testLabel: UILabel = {
-        let label = UILabel()
-        label.text = "Welcome!"
-        label.textAlignment = .center
-
-        return label
-    }()
+    private lazy var contentView = HomeContentView()
     
     init(viewModel: HomeViewModel) {
         self.viewModel = viewModel
@@ -37,6 +34,7 @@ class HomeViewController: UIViewController {
         setupUI()
         addSubviews()
         setConstraints()
+        observe()
     }
 }
 
@@ -49,13 +47,50 @@ private extension HomeViewController {
     }
     
     func addSubviews() {
-        view.addSubview(testLabel)
+        view.addSubview(contentView)
     }
 
     func setConstraints() {
-        testLabel.snp.remakeConstraints { make in
-            make.leading.trailing.equalToSuperview()
-            make.centerY.equalToSuperview()
+        contentView.snp.remakeConstraints { make in
+            make.edges.equalToSuperview()
         }
+    }
+    
+    func observe() {
+        contentView
+            .firstFavouriteStockButton
+            .rx.tap
+            .subscribe(onNext: { [weak self] in
+                guard let viewModel = self?.contentView.firstFavouriteStockButton.viewModel else { return }
+                self?.viewModel.onFavoriteButtonTap(with: viewModel)
+            })
+            .disposed(by: disposeBag)
+        
+        contentView
+            .secondFavouriteStockButton
+            .rx.tap
+            .subscribe(onNext: { [weak self] in
+                guard let viewModel = self?.contentView.secondFavouriteStockButton.viewModel else { return }
+                self?.viewModel.onFavoriteButtonTap(with: viewModel)
+            })
+            .disposed(by: disposeBag)
+        
+        contentView
+            .thirdFavouriteStockButton
+            .rx.tap
+            .subscribe(onNext: { [weak self] in
+                guard let viewModel = self?.contentView.thirdFavouriteStockButton.viewModel else { return }
+                self?.viewModel.onFavoriteButtonTap(with: viewModel)
+            })
+            .disposed(by: disposeBag)
+        
+        contentView
+            .fourthFavouriteStockButton
+            .rx.tap
+            .subscribe(onNext: { [weak self] in
+                guard let viewModel = self?.contentView.fourthFavouriteStockButton.viewModel else { return }
+                self?.viewModel.onFavoriteButtonTap(with: viewModel)
+            })
+            .disposed(by: disposeBag)
     }
 }

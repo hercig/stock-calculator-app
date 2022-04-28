@@ -15,11 +15,13 @@ class FavoriteStockButtonViewModel {
     let stockName: String
     let stockSymbol: String
     let backgroundColor: UIColor
+    let foregroundColor: UIColor
     
-    init(stockName: String, stockSymbol: String, backgroundColor: UIColor) {
+    init(stockName: String, stockSymbol: String, backgroundColor: UIColor, foregroundColor: UIColor = .appBlack) {
         self.stockName = stockName
         self.stockSymbol = stockSymbol
         self.backgroundColor = backgroundColor
+        self.foregroundColor = foregroundColor
     }
 }
 
@@ -27,12 +29,12 @@ class FavoriteStockButtonViewModel {
 
 class FavoriteStockButton: UIControl {
     
+    var viewModel: FavoriteStockButtonViewModel?
+    
     private lazy var containterView: UIView = {
         let view = UIView()
-        view.layer.shadowColor = UIColor.black.cgColor
-        view.layer.shadowOpacity = 0.1
-        view.layer.shadowRadius = 4
         view.layer.cornerRadius = 8
+        view.isUserInteractionEnabled = false
         
         return view
     }()
@@ -48,7 +50,7 @@ class FavoriteStockButton: UIControl {
     private lazy var buttonSubtitleLabel: UILabel = {
         let label = UILabel()
         label.textAlignment = .center
-        label.font = UIFont.appFont(with: 18)
+        label.font = UIFont.appFont(with: 12)
         
         return label
     }()
@@ -80,14 +82,14 @@ private extension FavoriteStockButton {
         }
         
         buttonTitleLabel.snp.remakeConstraints { make in
-            make.top.equalToSuperview().offset(8)
+            make.top.equalToSuperview().offset(32)
             make.leading.trailing.equalToSuperview().inset(4)
         }
         
         buttonSubtitleLabel.snp.remakeConstraints { make in
             make.top.equalTo(buttonTitleLabel.snp.bottom)
             make.leading.trailing.equalToSuperview().inset(4)
-            make.bottom.equalToSuperview().offset(-8)
+            make.bottom.equalToSuperview().offset(-32)
         }
     }
 }
@@ -97,8 +99,11 @@ private extension FavoriteStockButton {
 extension FavoriteStockButton {
     
     func updateUI(with viewModel: FavoriteStockButtonViewModel) {
+        self.viewModel = viewModel
         containterView.backgroundColor = viewModel.backgroundColor
         buttonTitleLabel.text = viewModel.stockName
+        buttonTitleLabel.textColor = viewModel.foregroundColor
         buttonSubtitleLabel.text = viewModel.stockSymbol
+        buttonSubtitleLabel.textColor = viewModel.foregroundColor
     }
 }

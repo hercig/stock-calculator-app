@@ -17,6 +17,8 @@
 		4E7EFC88281B00EE0049F023 /* FavoriteStockButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7EFC87281B00EE0049F023 /* FavoriteStockButton.swift */; };
 		4E7EFC8C281B03770049F023 /* UIFont+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7EFC8B281B03770049F023 /* UIFont+.swift */; };
 		4E7EFC8F281B06310049F023 /* UIControl+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7EFC8E281B06310049F023 /* UIControl+Rx.swift */; };
+		4E7EFC91281B1BE30049F023 /* UIColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7EFC90281B1BE30049F023 /* UIColor+.swift */; };
+		4E7EFC94281B43EF0049F023 /* HomeContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7EFC93281B43EE0049F023 /* HomeContentView.swift */; };
 		7732D452042F4AD934C46D95 /* Pods_stock_calculator_app.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F24898721BFCED4C2A583B2 /* Pods_stock_calculator_app.framework */; };
 /* End PBXBuildFile section */
 
@@ -33,6 +35,8 @@
 		4E7EFC87281B00EE0049F023 /* FavoriteStockButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteStockButton.swift; sourceTree = "<group>"; };
 		4E7EFC8B281B03770049F023 /* UIFont+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+.swift"; sourceTree = "<group>"; };
 		4E7EFC8E281B06310049F023 /* UIControl+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIControl+Rx.swift"; sourceTree = "<group>"; };
+		4E7EFC90281B1BE30049F023 /* UIColor+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+.swift"; sourceTree = "<group>"; };
+		4E7EFC93281B43EE0049F023 /* HomeContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeContentView.swift; sourceTree = "<group>"; };
 		72CFF6570B7A7D3D17B273EA /* Pods-stock-calculator-app.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-stock-calculator-app.release.xcconfig"; path = "Target Support Files/Pods-stock-calculator-app/Pods-stock-calculator-app.release.xcconfig"; sourceTree = "<group>"; };
 		7F24898721BFCED4C2A583B2 /* Pods_stock_calculator_app.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_stock_calculator_app.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		86321A08BE6B4B5A8A27628E /* Pods-stock-calculator-app.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-stock-calculator-app.debug.xcconfig"; path = "Target Support Files/Pods-stock-calculator-app/Pods-stock-calculator-app.debug.xcconfig"; sourceTree = "<group>"; };
@@ -126,6 +130,7 @@
 		4E2F4053281985F000701868 /* HomeScreen */ = {
 			isa = PBXGroup;
 			children = (
+				4E7EFC92281B43D60049F023 /* Views */,
 				4E2F40542819860700701868 /* HomeRouter.swift */,
 				4E2F40582819865600701868 /* HomeViewModel.swift */,
 				4E2F405A2819868800701868 /* HomeViewController.swift */,
@@ -154,6 +159,7 @@
 			isa = PBXGroup;
 			children = (
 				4E7EFC8B281B03770049F023 /* UIFont+.swift */,
+				4E7EFC90281B1BE30049F023 /* UIColor+.swift */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -164,6 +170,14 @@
 				4E7EFC8E281B06310049F023 /* UIControl+Rx.swift */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		4E7EFC92281B43D60049F023 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4E7EFC93281B43EE0049F023 /* HomeContentView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		BE49F5B87C96B3FF1A26B12E /* Frameworks */ = {
@@ -300,11 +314,13 @@
 				4E7EFC88281B00EE0049F023 /* FavoriteStockButton.swift in Sources */,
 				4E7EFC8F281B06310049F023 /* UIControl+Rx.swift in Sources */,
 				4E2F405B2819868900701868 /* HomeViewController.swift in Sources */,
+				4E7EFC94281B43EF0049F023 /* HomeContentView.swift in Sources */,
 				4E2F403F281976D800701868 /* AppController.swift in Sources */,
 				4E7EFC8C281B03770049F023 /* UIFont+.swift in Sources */,
 				4E2F40552819860700701868 /* HomeRouter.swift in Sources */,
 				4E2F403B281976D800701868 /* AppDelegate.swift in Sources */,
 				4E2F40592819865700701868 /* HomeViewModel.swift in Sources */,
+				4E7EFC91281B1BE30049F023 /* UIColor+.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
