@@ -14,6 +14,9 @@
 		4E2F40552819860700701868 /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E2F40542819860700701868 /* HomeRouter.swift */; };
 		4E2F40592819865700701868 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E2F40582819865600701868 /* HomeViewModel.swift */; };
 		4E2F405B2819868900701868 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E2F405A2819868800701868 /* HomeViewController.swift */; };
+		4E7EFC88281B00EE0049F023 /* FavoriteStockButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7EFC87281B00EE0049F023 /* FavoriteStockButton.swift */; };
+		4E7EFC8C281B03770049F023 /* UIFont+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7EFC8B281B03770049F023 /* UIFont+.swift */; };
+		4E7EFC8F281B06310049F023 /* UIControl+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7EFC8E281B06310049F023 /* UIControl+Rx.swift */; };
 		7732D452042F4AD934C46D95 /* Pods_stock_calculator_app.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F24898721BFCED4C2A583B2 /* Pods_stock_calculator_app.framework */; };
 /* End PBXBuildFile section */
 
@@ -27,6 +30,9 @@
 		4E2F40542819860700701868 /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
 		4E2F40582819865600701868 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		4E2F405A2819868800701868 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		4E7EFC87281B00EE0049F023 /* FavoriteStockButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteStockButton.swift; sourceTree = "<group>"; };
+		4E7EFC8B281B03770049F023 /* UIFont+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+.swift"; sourceTree = "<group>"; };
+		4E7EFC8E281B06310049F023 /* UIControl+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIControl+Rx.swift"; sourceTree = "<group>"; };
 		72CFF6570B7A7D3D17B273EA /* Pods-stock-calculator-app.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-stock-calculator-app.release.xcconfig"; path = "Target Support Files/Pods-stock-calculator-app/Pods-stock-calculator-app.release.xcconfig"; sourceTree = "<group>"; };
 		7F24898721BFCED4C2A583B2 /* Pods_stock_calculator_app.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_stock_calculator_app.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		86321A08BE6B4B5A8A27628E /* Pods-stock-calculator-app.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-stock-calculator-app.debug.xcconfig"; path = "Target Support Files/Pods-stock-calculator-app/Pods-stock-calculator-app.debug.xcconfig"; sourceTree = "<group>"; };
@@ -87,6 +93,8 @@
 			isa = PBXGroup;
 			children = (
 				4E2F40502819827B00701868 /* ViewControllers */,
+				4E7EFC84281B004F0049F023 /* Buttons */,
+				4E7EFC89281B01580049F023 /* Extensions */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -123,6 +131,39 @@
 				4E2F405A2819868800701868 /* HomeViewController.swift */,
 			);
 			path = HomeScreen;
+			sourceTree = "<group>";
+		};
+		4E7EFC84281B004F0049F023 /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				4E7EFC87281B00EE0049F023 /* FavoriteStockButton.swift */,
+			);
+			path = Buttons;
+			sourceTree = "<group>";
+		};
+		4E7EFC89281B01580049F023 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				4E7EFC8D281B06120049F023 /* Pods */,
+				4E7EFC8A281B03240049F023 /* UIKit */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		4E7EFC8A281B03240049F023 /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				4E7EFC8B281B03770049F023 /* UIFont+.swift */,
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
+		4E7EFC8D281B06120049F023 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4E7EFC8E281B06310049F023 /* UIControl+Rx.swift */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 		BE49F5B87C96B3FF1A26B12E /* Frameworks */ = {
@@ -256,8 +297,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4E7EFC88281B00EE0049F023 /* FavoriteStockButton.swift in Sources */,
+				4E7EFC8F281B06310049F023 /* UIControl+Rx.swift in Sources */,
 				4E2F405B2819868900701868 /* HomeViewController.swift in Sources */,
 				4E2F403F281976D800701868 /* AppController.swift in Sources */,
+				4E7EFC8C281B03770049F023 /* UIFont+.swift in Sources */,
 				4E2F40552819860700701868 /* HomeRouter.swift in Sources */,
 				4E2F403B281976D800701868 /* AppDelegate.swift in Sources */,
 				4E2F40592819865700701868 /* HomeViewModel.swift in Sources */,
@@ -328,7 +372,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -382,7 +426,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
