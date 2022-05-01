@@ -29,6 +29,7 @@ extension AppController {
         let homeRouter = HomeRouter()
         let homeViewModel = HomeViewModel(router: homeRouter)
         let homeViewController = HomeViewController(viewModel: homeViewModel)
+        homeRouter.viewController = homeViewController
         
         navigationController?.setViewControllers([homeViewController], animated: true)
     }
