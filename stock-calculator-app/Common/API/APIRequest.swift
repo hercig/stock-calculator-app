@@ -26,7 +26,6 @@ extension APIRequest {
         urlRequest.httpMethod = httpMethod.rawValue
         urlRequest.httpBody = requestBody
         urlRequest.setValue("application/json", forHTTPHeaderField: "Content-Type")
-//        urlRequest.setValue("HHH", forHTTPHeaderField: "User-Agent")
         query.isEmptyOrNil ? () : query?.forEach { urlRequest.url?.appendQueryItem(name: $0.key, value: $0.value) }
 
         return urlRequest

@@ -35,24 +35,4 @@ class APIClient {
             return Disposables.create()
         }
     }
-    
-    func performRequestWithEmptyBodyResponse<T: APIRequest>(_ request: T) -> Single<Any?> {
-        return Single.create { single -> Disposable in
-            AF.request(request)
-                .validate()
-                .response(completionHandler: { response in
-                    switch response.result {
-                    case .success(let value):
-                        single(.success(value))
-                    case .failure(let afError):
-                        guard let parsedError = response.data?.parseError() else {
-                            single(.error(afError))
-                            return
-                        }
-                        single(.error(parsedError))
-                    }
-                })
-            return Disposables.create()
-        }
-    }
 }
