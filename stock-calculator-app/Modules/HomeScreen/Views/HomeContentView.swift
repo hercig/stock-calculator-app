@@ -13,6 +13,14 @@ import RxCocoa
 // MARK: - HomeContentView
 
 class HomeContentView: UIView {
+    
+    private lazy var screenTitleLabel: UILabel = {
+        let label = UILabel()
+        label.font = UIFont.appFont(with: 28, weight: .bold)
+        label.text = "Favorite Stocks"
+        
+        return label
+    }()
 
     lazy var firstFavouriteStockButton: FavoriteStockButton = {
         let button = FavoriteStockButton()
@@ -104,6 +112,7 @@ class HomeContentView: UIView {
 private extension HomeContentView {
     
     func addSubviews() {
+        addSubview(screenTitleLabel)
         addSubview(vStack)
         vStack.addArrangedSubview(firstRowStackView)
         vStack.addArrangedSubview(secondRowStackView)
@@ -117,6 +126,11 @@ private extension HomeContentView {
         vStack.snp.remakeConstraints { make in
             make.leading.trailing.equalToSuperview().inset(16)
             make.centerY.equalToSuperview()
+        }
+        
+        screenTitleLabel.snp.remakeConstraints { make in
+            make.bottom.equalTo(vStack.snp.top).offset(-16)
+            make.leading.trailing.equalToSuperview().inset(16)
         }
     }
 }
