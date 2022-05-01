@@ -30,11 +30,15 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         setupUI()
         addSubviews()
         setConstraints()
         observe()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.navigationBar.isHidden = true
     }
 }
 
@@ -44,6 +48,7 @@ private extension HomeViewController {
     
     func setupUI() {
         view.backgroundColor = .white
+        navigationItem.backButtonTitle = ""
     }
     
     func addSubviews() {

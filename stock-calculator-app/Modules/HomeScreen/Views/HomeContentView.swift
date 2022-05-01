@@ -96,6 +96,33 @@ class HomeContentView: UIView {
         return stackView
     }()
     
+    private lazy var editFavoritesButton: UIButton = {
+        let button = UIButton(type: .system)
+        button.setTitle("Edit favorite stocks", for: .normal)
+        
+        return button
+    }()
+    
+    private lazy var searchButton: UIButton = {
+        let button = UIButton()
+        button.setImage(UIImage(systemName: "magnifyingglass"), for: .normal)
+        button.backgroundColor = .appBrown
+        button.layer.cornerRadius = 8
+        button.tintColor = .appBlack
+        
+        return button
+    }()
+    
+    private lazy var settingsButton: UIButton = {
+        let button = UIButton()
+        button.setImage(UIImage(systemName: "line.3.horizontal.decrease"), for: .normal)
+        button.backgroundColor = .appBrown
+        button.layer.cornerRadius = 8
+        button.tintColor = .appBlack
+        
+        return button
+    }()
+    
     init() {
         super.init(frame: .zero)
         addSubviews()
@@ -112,6 +139,8 @@ class HomeContentView: UIView {
 private extension HomeContentView {
     
     func addSubviews() {
+        addSubview(searchButton)
+        addSubview(settingsButton)
         addSubview(screenTitleLabel)
         addSubview(vStack)
         vStack.addArrangedSubview(firstRowStackView)
@@ -120,9 +149,22 @@ private extension HomeContentView {
         firstRowStackView.addArrangedSubview(secondFavouriteStockButton)
         secondRowStackView.addArrangedSubview(thirdFavouriteStockButton)
         secondRowStackView.addArrangedSubview(fourthFavouriteStockButton)
+        addSubview(editFavoritesButton)
     }
 
     func setConstraints() {
+        searchButton.snp.remakeConstraints { make in
+            make.top.equalTo(safeAreaLayoutGuide.snp.top).inset(16)
+            make.trailing.equalToSuperview().inset(16)
+            make.width.height.equalTo(40)
+        }
+        
+        settingsButton.snp.remakeConstraints { make in
+            make.top.equalTo(safeAreaLayoutGuide.snp.top).inset(16)
+            make.leading.equalToSuperview().inset(16)
+            make.width.height.equalTo(40)
+        }
+        
         vStack.snp.remakeConstraints { make in
             make.leading.trailing.equalToSuperview().inset(16)
             make.centerY.equalToSuperview()
@@ -131,6 +173,11 @@ private extension HomeContentView {
         screenTitleLabel.snp.remakeConstraints { make in
             make.bottom.equalTo(vStack.snp.top).offset(-16)
             make.leading.trailing.equalToSuperview().inset(16)
+        }
+        
+        editFavoritesButton.snp.remakeConstraints { make in
+            make.top.equalTo(vStack.snp.bottom).offset(16)
+            make.centerX.equalToSuperview()
         }
     }
 }

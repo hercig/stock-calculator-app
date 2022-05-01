@@ -10,7 +10,7 @@ import UIKit
 extension UIFont {
     
     static func appFont(with size: CGFloat, weight: Weight = .regular) -> UIFont {
-        return UIFont(name: "SFProDisplay-(weightString)", size: size) ?? UIFont.systemFont(ofSize: size, weight: weight)
+        return UIFont(name: "Montserrat-\(weight.weightString)", size: size)!
     }
 }
 
@@ -26,6 +26,14 @@ private extension UIFont.Weight {
             return "SemiBold"
         case .bold:
             return "Bold"
+        case .black:
+            return "Black"
+        case .ultraLight:
+            return "UltraLight"
+        case .thin:
+            return "Thin"
+        case .light:
+            return "Light"
         default:
             return "Unknown"
         }
