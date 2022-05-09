@@ -8,6 +8,8 @@
 import Foundation
 
 extension Model {
+    
+    // MARK: - ChartResponse
     struct ChartResponse: Codable {
         let chart: Chart?
     }
@@ -78,5 +80,4 @@ extension Model {
         let timezone: String?
         let end, start, gmtoffset: Int?
     }
-
 }

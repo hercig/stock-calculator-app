@@ -8,8 +8,9 @@ target 'stock-calculator-app' do
   # Pods for stock-calculator-app
     pod 'SnapKit'
     pod 'Alamofire'
-    pod 'RxSwift', '~> 5'
-    pod 'RxCocoa', '~> 5'
+    pod 'RxSwift'
+    pod 'RxCocoa'
+    pod 'RxKeyboard'
     pod 'lottie-ios'
 
 end

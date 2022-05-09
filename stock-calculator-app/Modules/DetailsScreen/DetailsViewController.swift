@@ -41,6 +41,7 @@ class DetailsViewController: UIViewController {
 private extension DetailsViewController {
     
     func setupUI() {
+        hideKeyboardWhenTappedAround() 
         view.backgroundColor = .white
     }
     

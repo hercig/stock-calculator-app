@@ -4,6 +4,9 @@ PODS:
   - RxCocoa (5.1.3):
     - RxRelay (~> 5)
     - RxSwift (~> 5)
+  - RxKeyboard (1.0.0):
+    - RxCocoa (~> 5.0)
+    - RxSwift (~> 5.0)
   - RxRelay (5.1.3):
     - RxSwift (~> 5)
   - RxSwift (5.1.3)
@@ -12,8 +15,9 @@ PODS:
 DEPENDENCIES:
   - Alamofire
   - lottie-ios
-  - RxCocoa (~> 5)
-  - RxSwift (~> 5)
+  - RxCocoa
+  - RxKeyboard
+  - RxSwift
   - SnapKit
 
 SPEC REPOS:
@@ -21,6 +25,7 @@ SPEC REPOS:
     - Alamofire
     - lottie-ios
     - RxCocoa
+    - RxKeyboard
     - RxRelay
     - RxSwift
     - SnapKit
@@ -29,10 +34,11 @@ SPEC CHECKSUMS:
   Alamofire: 87bd8c952f9a4454320fce00d9cc3de57bcadaf5
   lottie-ios: 6ac74dcc09904798f59b18cb3075c089d76be9ae
   RxCocoa: e2ed092d5432e4296aa818021d27de4090ac0354
+  RxKeyboard: 6683c4344304a00f943c158bd8a43ce5469c82a7
   RxRelay: 5a18c2eb2d68326ebaf0112f80d837ae41b92b97
   RxSwift: 915abbdfb62214aa89ccd0b194d44fb478019b27
   SnapKit: e01d52ebb8ddbc333eefe2132acf85c8227d9c25
 
-PODFILE CHECKSUM: 0d01c2b1078c07a2984b315649e91c67dab3f8ca
+PODFILE CHECKSUM: 86f354092bfe36d8973608575f37bfdf72666f22
 
 COCOAPODS: 1.11.2

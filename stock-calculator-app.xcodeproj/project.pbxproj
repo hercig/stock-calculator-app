@@ -14,6 +14,11 @@
 		4E2F40552819860700701868 /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E2F40542819860700701868 /* HomeRouter.swift */; };
 		4E2F40592819865700701868 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E2F40582819865600701868 /* HomeViewModel.swift */; };
 		4E2F405B2819868900701868 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E2F405A2819868800701868 /* HomeViewController.swift */; };
+		4E6D482B2827F3CA009D99AE /* DatePickerInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6D482A2827F3CA009D99AE /* DatePickerInputView.swift */; };
+		4E6D482D2827F3FD009D99AE /* DateForematter+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6D482C2827F3FD009D99AE /* DateForematter+.swift */; };
+		4E6D48302827F43A009D99AE /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6D482F2827F43A009D99AE /* Constants.swift */; };
+		4E6D483228280419009D99AE /* UIViewController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6D483128280419009D99AE /* UIViewController+.swift */; };
+		4E6D483428281064009D99AE /* Date+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6D483328281064009D99AE /* Date+.swift */; };
 		4E7EFC88281B00EE0049F023 /* FavoriteStockButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7EFC87281B00EE0049F023 /* FavoriteStockButton.swift */; };
 		4E7EFC8C281B03770049F023 /* UIFont+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7EFC8B281B03770049F023 /* UIFont+.swift */; };
 		4E7EFC8F281B06310049F023 /* UIControl+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7EFC8E281B06310049F023 /* UIControl+Rx.swift */; };
@@ -47,6 +52,7 @@
 		4E7EFCDF281EC2A20049F023 /* Montserrat-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4E7EFCCD281EC2A20049F023 /* Montserrat-Medium.ttf */; };
 		4E7EFCE2281EC2A20049F023 /* Montserrat-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4E7EFCD0281EC2A20049F023 /* Montserrat-Thin.ttf */; };
 		4E7EFCE9281EED610049F023 /* DetailsContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7EFCE8281EED610049F023 /* DetailsContentView.swift */; };
+		4E7EFCEC281EFF490049F023 /* TextInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7EFCEB281EFF490049F023 /* TextInputView.swift */; };
 		7732D452042F4AD934C46D95 /* Pods_stock_calculator_app.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F24898721BFCED4C2A583B2 /* Pods_stock_calculator_app.framework */; };
 /* End PBXBuildFile section */
 
@@ -60,6 +66,11 @@
 		4E2F40542819860700701868 /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
 		4E2F40582819865600701868 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		4E2F405A2819868800701868 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		4E6D482A2827F3CA009D99AE /* DatePickerInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerInputView.swift; sourceTree = "<group>"; };
+		4E6D482C2827F3FD009D99AE /* DateForematter+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateForematter+.swift"; sourceTree = "<group>"; };
+		4E6D482F2827F43A009D99AE /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		4E6D483128280419009D99AE /* UIViewController+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+.swift"; sourceTree = "<group>"; };
+		4E6D483328281064009D99AE /* Date+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+.swift"; sourceTree = "<group>"; };
 		4E7EFC87281B00EE0049F023 /* FavoriteStockButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteStockButton.swift; sourceTree = "<group>"; };
 		4E7EFC8B281B03770049F023 /* UIFont+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+.swift"; sourceTree = "<group>"; };
 		4E7EFC8E281B06310049F023 /* UIControl+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIControl+Rx.swift"; sourceTree = "<group>"; };
@@ -93,6 +104,7 @@
 		4E7EFCCD281EC2A20049F023 /* Montserrat-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Medium.ttf"; sourceTree = "<group>"; };
 		4E7EFCD0281EC2A20049F023 /* Montserrat-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Thin.ttf"; sourceTree = "<group>"; };
 		4E7EFCE8281EED610049F023 /* DetailsContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsContentView.swift; sourceTree = "<group>"; };
+		4E7EFCEB281EFF490049F023 /* TextInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextInputView.swift; sourceTree = "<group>"; };
 		72CFF6570B7A7D3D17B273EA /* Pods-stock-calculator-app.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-stock-calculator-app.release.xcconfig"; path = "Target Support Files/Pods-stock-calculator-app/Pods-stock-calculator-app.release.xcconfig"; sourceTree = "<group>"; };
 		7F24898721BFCED4C2A583B2 /* Pods_stock_calculator_app.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_stock_calculator_app.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		86321A08BE6B4B5A8A27628E /* Pods-stock-calculator-app.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-stock-calculator-app.debug.xcconfig"; path = "Target Support Files/Pods-stock-calculator-app/Pods-stock-calculator-app.debug.xcconfig"; sourceTree = "<group>"; };
@@ -152,6 +164,8 @@
 		4E2F404F2819826200701868 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				4E6D482E2827F42F009D99AE /* Constants */,
+				4E7EFCEA281EFF340049F023 /* Views */,
 				4E7EFC95281BEE640049F023 /* API */,
 				4E2F40502819827B00701868 /* ViewControllers */,
 				4E7EFC84281B004F0049F023 /* Buttons */,
@@ -197,6 +211,14 @@
 			path = HomeScreen;
 			sourceTree = "<group>";
 		};
+		4E6D482E2827F42F009D99AE /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				4E6D482F2827F43A009D99AE /* Constants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
 		4E7EFC84281B004F0049F023 /* Buttons */ = {
 			isa = PBXGroup;
 			children = (
@@ -225,6 +247,9 @@
 				4E7EFCA9281DB1890049F023 /* Data+.swift */,
 				4E7EFCB3281DBA110049F023 /* Int+.swift */,
 				4E7EFCB5281DC2090049F023 /* Encodable+.swift */,
+				4E6D482C2827F3FD009D99AE /* DateForematter+.swift */,
+				4E6D483128280419009D99AE /* UIViewController+.swift */,
+				4E6D483328281064009D99AE /* Date+.swift */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -318,6 +343,15 @@
 				4E7EFCD0281EC2A20049F023 /* Montserrat-Thin.ttf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		4E7EFCEA281EFF340049F023 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4E7EFCEB281EFF490049F023 /* TextInputView.swift */,
+				4E6D482A2827F3CA009D99AE /* DatePickerInputView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		BE49F5B87C96B3FF1A26B12E /* Frameworks */ = {
@@ -460,11 +494,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				4E7EFC88281B00EE0049F023 /* FavoriteStockButton.swift in Sources */,
+				4E6D48302827F43A009D99AE /* Constants.swift in Sources */,
 				4E7EFCB2281DB8B90049F023 /* ChartRequest.swift in Sources */,
 				4E7EFC8F281B06310049F023 /* UIControl+Rx.swift in Sources */,
 				4E7EFCE9281EED610049F023 /* DetailsContentView.swift in Sources */,
 				4E2F405B2819868900701868 /* HomeViewController.swift in Sources */,
 				4E7EFC94281B43EF0049F023 /* HomeContentView.swift in Sources */,
+				4E6D483228280419009D99AE /* UIViewController+.swift in Sources */,
 				4E7EFCB9281EA03A0049F023 /* DetailsRouter.swift in Sources */,
 				4E7EFCC0281EA1560049F023 /* DetailsContext.swift in Sources */,
 				4E2F403F281976D800701868 /* AppController.swift in Sources */,
@@ -480,13 +516,17 @@
 				4E2F40592819865700701868 /* HomeViewModel.swift in Sources */,
 				4E7EFCA1281BEFA00049F023 /* Endpoint.swift in Sources */,
 				4E7EFC9F281BEF5D0049F023 /* URL+.swift in Sources */,
+				4E7EFCEC281EFF490049F023 /* TextInputView.swift in Sources */,
 				4E7EFC99281BEE980049F023 /* APIRequest.swift in Sources */,
 				4E7EFC91281B1BE30049F023 /* UIColor+.swift in Sources */,
 				4E7EFC9D281BEF0B0049F023 /* String+.swift in Sources */,
+				4E6D483428281064009D99AE /* Date+.swift in Sources */,
 				4E7EFCAC281DB7440049F023 /* ChartResponse.swift in Sources */,
 				4E7EFCAF281DB7DD0049F023 /* ChartService.swift in Sources */,
+				4E6D482B2827F3CA009D99AE /* DatePickerInputView.swift in Sources */,
 				4E7EFCA8281DB0DB0049F023 /* ErrorResponse.swift in Sources */,
 				4E7EFCA3281BEFC90049F023 /* NetworkConstants.swift in Sources */,
+				4E6D482D2827F3FD009D99AE /* DateForematter+.swift in Sources */,
 				4E7EFC9B281BEED70049F023 /* Optional+.swift in Sources */,
 				4E7EFCBB281EA04B0049F023 /* DetailsViewModel.swift in Sources */,
 			);
